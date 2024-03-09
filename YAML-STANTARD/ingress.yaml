@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fastapi-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-k8s
+spec:
+  ingressClassName: traefik
+  tls:
+    - secretName: letsencrypt-secret
+      hosts:
+        - website.zz.cloudns.ph
+  rules:
+  - host: website.zz.cloudns.ph
+    http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: fastapi
+              port:
+                number: 5000
