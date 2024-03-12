@@ -16,7 +16,7 @@ spec:
         name: fastapi
     spec:
       containers:
-        - image: zzouhal/fastapi:latest
+        - image: kentronic/fastapi:latest
           name: fastapi
           ports:
             - containerPort: 5000

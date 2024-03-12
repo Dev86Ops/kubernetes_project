@@ -9,9 +9,9 @@ spec:
   tls:
     - secretName: letsencrypt-secret
       hosts:
-        - website.zz.cloudns.ph
+        - admin.ken.cloudns.ch
   rules:
-  - host: website.zz.cloudns.ph
+  - host: admin.ken.cloudns.ch
     http:
       paths:
         - path: /

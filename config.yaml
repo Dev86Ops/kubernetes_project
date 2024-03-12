@@ -4,7 +4,7 @@ metadata:
   name: db-secret
 type: Opaque
 data:
-  POSTGRES_PASSWORD: cGFzc3dvcmQ= #mot de passe encodé en base64
+  POSTGRES_PASSWORD: cGFzc3dvcmQ= #base64 encoded password
 
 ---
 
@@ -25,7 +25,7 @@ metadata:
   name: pg-secret
 type: Opaque
 data:
-  PGADMIN_DEFAULT_PASSWORD: cm9vdA== #mot de passe encodé en base64
+  PGADMIN_DEFAULT_PASSWORD: cm9vdA== #base64 encoded password
 
 ---
 

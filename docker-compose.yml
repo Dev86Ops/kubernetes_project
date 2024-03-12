@@ -33,6 +33,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    image: kentronic/fastapi:latest 
     ports:
       - 80:5000
     depends_on:
