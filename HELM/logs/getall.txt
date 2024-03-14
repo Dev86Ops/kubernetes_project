@@ -1,25 +1,25 @@
-NAME                           READY   STATUS    RESTARTS        AGE
-pod/db-0                       1/1     Running   0               5m26s
-pod/fastapi-6fcbdc7465-2tsr7   1/1     Running   0               5m11s
-pod/fastapi-6fcbdc7465-k9xvw   1/1     Running   0               5m11s
-pod/fastapi-6fcbdc7465-qx2kv   1/1     Running   1 (5m22s ago)   5m27s
-pod/pgadmin-5fbc98b487-2hcwx   1/1     Running   0               5m27s
+NAME                           READY   STATUS    RESTARTS      AGE
+pod/db-0                       1/1     Running   0             37m
+pod/fastapi-687f7844b5-bsdc6   1/1     Running   0             37m
+pod/fastapi-687f7844b5-kp75b   1/1     Running   0             37m
+pod/fastapi-687f7844b5-pqwbm   1/1     Running   1 (37m ago)   37m
+pod/pgadmin-5fbc98b487-w2tfm   1/1     Running   0             37m
 
-NAME              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
-service/db        ClusterIP   10.43.74.184    <none>        5432/TCP   5m27s
-service/fastapi   ClusterIP   10.43.126.145   <none>        5000/TCP   5m27s
-service/pgadmin   ClusterIP   10.43.144.119   <none>        8080/TCP   5m27s
+NAME              TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)    AGE
+service/db        ClusterIP   10.43.53.40   <none>        5432/TCP   37m
+service/fastapi   ClusterIP   10.43.94.98   <none>        5000/TCP   37m
+service/pgadmin   ClusterIP   10.43.29.8    <none>        8080/TCP   37m
 
 NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/fastapi   3/3     3            3           5m27s
-deployment.apps/pgadmin   1/1     1            1           5m27s
+deployment.apps/fastapi   3/3     3            3           37m
+deployment.apps/pgadmin   1/1     1            1           37m
 
 NAME                                 DESIRED   CURRENT   READY   AGE
-replicaset.apps/fastapi-6fcbdc7465   3         3         3       5m27s
-replicaset.apps/pgadmin-5fbc98b487   1         1         1       5m27s
+replicaset.apps/fastapi-687f7844b5   3         3         3       37m
+replicaset.apps/pgadmin-5fbc98b487   1         1         1       37m
 
 NAME                  READY   AGE
-statefulset.apps/db   1/1     5m27s
+statefulset.apps/db   1/1     37m
 
 NAME                                              REFERENCE            TARGETS   MINPODS   MAXPODS   REPLICAS   AGE
-horizontalpodautoscaler.autoscaling/hpa-fastapi   Deployment/fastapi   2%/70%    3         6         3          5m27s
+horizontalpodautoscaler.autoscaling/hpa-fastapi   Deployment/fastapi   3%/70%    3         6         3          37m

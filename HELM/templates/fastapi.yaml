@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.fastapi.name }}
   labels:
-    name: {{.Values.fastapi.name }}
+    name: {{ .Values.fastapi.name }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.fastapi.replicaCount }}
@@ -41,8 +41,6 @@ spec:
   selector:
     name: {{ .Values.fastapi.name }}
 
-
-
 {{- if .Values.autoscaling.enabled }}
 ---
 apiVersion: autoscaling/v1
@@ -59,8 +57,9 @@ spec:
   targetCPUUtilizationPercentage: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
 
 {{- end }}
+
+{{- if .Values.ingress.enabled }}
 ---
-{{- if .Values.ingress.enabled -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:

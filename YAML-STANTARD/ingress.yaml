@@ -7,11 +7,11 @@ metadata:
 spec:
   ingressClassName: traefik
   tls:
-    - secretName: letsencrypt-secret
+    - secretName: fastapi-secret
       hosts:
-        - admin.ken.cloudns.ch
+        - www.cynomart.site
   rules:
-  - host: admin.ken.cloudns.ch
+  - host: www.cynomart.site
     http:
       paths:
         - path: /

@@ -16,7 +16,7 @@ spec:
         name: fastapi
     spec:
       containers:
-        - image: zzouhal/fastapi:latest
+        - image: kentronic/fastapi:latest
           name: fastapi
           ports:
             - containerPort: 5000
@@ -78,9 +78,9 @@ spec:
   tls:
     - secretName: letsencrypt-secret
       hosts:
-        - website.zz.cloudns.ph
+        - www.cynomart.site
   rules:
-  - host: website.zz.cloudns.ph
+  - host: www.cynomart.site
     http:
       paths:
         - path: /

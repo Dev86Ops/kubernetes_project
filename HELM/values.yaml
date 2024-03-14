@@ -7,7 +7,7 @@ fastapi:
   name: fastapi
   replicaCount: 3
   image:
-    repository: zzouhal/fastapi
+    repository: kentronic/fastapi
     pullPolicy: IfNotPresent
     tag: "latest"
   service:
@@ -21,7 +21,7 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-k8s
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: website.zz.cloudns.ph
+    - host: www.cynomart.site
       paths:
         - path: /
           pathType: Prefix
@@ -31,7 +31,7 @@ ingress:
   tls:
    - secretName: letsencrypt-secret
      hosts:
-       - website.zz.cloudns.ph
+       - www.cynomart.site
 
 resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
